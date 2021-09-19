@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class BulletController : MonoBehaviour
 {
-    // Update is called once per frame
     void Update()
     {
         if (gameObject.transform.position.x <= -9 || gameObject.transform.position.x >= 9 || gameObject.transform.position.y <= -5 || gameObject.transform.position.y >= 5)
@@ -13,6 +12,6 @@ public class BulletController : MonoBehaviour
         }
     }
     void OnCollisionEnter2D(Collision2D collision){
-
+        Destroy(gameObject);
     }
 }
